@@ -14,7 +14,7 @@ Content-type: application/json
 GET {{baseUrl}}
 
 ### GET BY ID
-GET {{baseUrl}}/3
+GET {{baseUrl}}/44
 
 ### UPDATE ALL DATA
 PUT {{baseUrl}}/2

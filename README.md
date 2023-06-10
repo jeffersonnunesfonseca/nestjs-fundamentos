@@ -165,3 +165,10 @@ INTERCEPTORS
 
 - antes ou apos uma intrução eu posso fazer algo a um método
 - Posso utilizar dentro de um controller, um metodo ou de forma global no bootstrap
+
+MIDDLAWARES
+
+- FUNÇÕES que são chamadas ANTES de um manipulador de rotas
+- Um middleware pode chamar outro
+- Exclusivo a requisições http
+- Necessario implementar NestModule no modulo que vai utilizar

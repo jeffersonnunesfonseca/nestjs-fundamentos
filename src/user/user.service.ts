@@ -23,6 +23,7 @@ export class UserService {
   }
 
   async findOne(id: number) {
+    await this.exists(id);
     return await this.prisma.users.findUnique({
       where: {
         id: id,
@@ -79,7 +80,13 @@ export class UserService {
   }
 
   async exists(id: number) {
-    if (!(await this.findOne(id))) {
+    if (
+      !(await this.prisma.users.count({
+        where: {
+          id,
+        },
+      }))
+    ) {
       throw new NotFoundException(`User ${id} not found`);
     }
   }
