@@ -172,3 +172,13 @@ MIDDLAWARES
 - Um middleware pode chamar outro
 - Exclusivo a requisições http
 - Necessario implementar NestModule no modulo que vai utilizar
+
+GUARDS
+
+- so terá uma responsabilidade, ideal para autenticação
+
+Exceptions Filter
+
+Param Decorators
+
+Custom Decorators
