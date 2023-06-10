@@ -146,3 +146,22 @@ prisma gerar arquivos, ele olha as tabelas no banco e gera
 Rodando migrate
 `npx prisma migrate dev --name addBirthAt`
 `npx prisma generate`
+
+PIPE TRANSFORM
+
+Pipes padrão do nest (built - in pipes)
+
+- ValidationPipe
+- ParseIntPipe
+- ParseFloatPipe
+- ParseBoolPipe
+- ParseArrayPipe
+- ParseUUIDPipe
+- ParseEnumPipe
+- DefaultValuePipe
+- ParseFilePipe
+
+INTERCEPTORS
+
+- antes ou apos uma intrução eu posso fazer algo a um método
+- Posso utilizar dentro de um controller, um metodo ou de forma global no bootstrap
