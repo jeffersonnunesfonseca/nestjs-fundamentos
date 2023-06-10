@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:3000/users
+
+### CREATE
+POST {{baseUrl}}
+Content-type: application/json
+
+{
+    "name": "Jefferson",
+    "email": "jeff@mail.com",
+    "password": "A123456"
+}
+
+### GET ALL
+GET {{baseUrl}}
+
+### GET BY ID
+GET {{baseUrl}}/1
+
+### UPDATE ALL
+PUT {{baseUrl}}/1
+Content-type: application/json
+
+{
+    "name": "Jefferson",
+    "email": "jeff@mail.com",
+    "password": "B123456"
+}
+
+### UPDATE PARTIAL
+PATCH {{baseUrl}}/1
+Content-type: application/json
+
+{
+    "name": "Jefferson",
+    "email": "jeff@mail.com"
+}
+
+### DELETE
+DELETE {{baseUrl}}/1
+

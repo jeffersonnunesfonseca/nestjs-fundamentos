@@ -1,0 +1,13 @@
+GET {{$dotenv API_BASE_URL}}
+
+###
+POST {{$dotenv API_BASE_URL}}
+Content-type: application/json
+
+{
+    "name": "produto teste",
+    "price": 10.02
+}
+
+# Forma de utilizar variavel do .env
+# GET {{baseUrl}}/{{$dotenv TESTE}}
