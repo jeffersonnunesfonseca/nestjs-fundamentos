@@ -122,3 +122,27 @@ VALIDATION PIPE
 
 Permitir utilizar generics padronizados para o nest
 `yarn add @nestjs/mapped-types`
+
+# BD ORM PRISMA
+
+configurando o PRISMA depois TYPEORM
+
+`yarn add -D prisma`
+
+`npx prisma`
+
+configuração inicial, basicamente cria as envs no .env e uma pasta primsa com um schema
+`npx prisma init`
+
+`CREATE SCHEMA api ;`
+
+mudar o driver no schema para mysql
+
+prisma gerar arquivos, ele olha as tabelas no banco e gera
+`npx prisma db pull`
+
+`npx prisma generate`
+
+Rodando migrate
+`npx prisma migrate dev --name addBirthAt`
+`npx prisma generate`
