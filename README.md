@@ -182,3 +182,30 @@ Exceptions Filter
 Param Decorators
 
 Custom Decorators
+
+JWT Conceitos básicos
+
+composto 3 partes separados por ponto em base64
+header - codifficado
+payload - codificado
+Signature - criptografado
+
+Chaves reservadas
+
+"iss": Esta chave que é a abreviação da palavra issuer serve para identificar o principal emissor do JWT e o seu uso é opcional.
+
+"sub": Esta chave que é a abreviação da palavra subject serve para identificar o principal assunto do JWT e o emissor deve encarar esse valor como exclusivo, o uso é opcional.
+
+"aud": Esta chave que é a abreviação da palavra audience serve para identificar o destinatário do token, o uso é opcional.
+
+"exp": Esta chave que é a abreviação da expressão expiration time serve para identificar o tempo de expiração do token, o uso é opcional.
+
+"nbf": Esta chave que é a abreviação da expressão not before serve para identificar o tempo de inicio da validade do token, seu uso é opcional.
+
+"iat": Esta chave que é a abreviação da expressão issued at serve para identificar o momento da criação do token e assim saber qual a sua idade, o seu uso é opcional.
+
+"jti": Esta chave que é a abreviação da expressão JWT ID serve para identificar de forma única um token, isso é útil para uma aplicação que possui mais de um emissor de tokens, o seu uso é opcional.
+
+NEST JWT
+
+`yarn add @nestjs/jwt`

@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:3000/login
+
+### LOGIN
+POST {{baseUrl}}/login
+Content-type: application/json
+
+{
+    "email": "fran@mail.com",
+    "password": "CC123456"
+}
+
+
+### REGISTER
+POST {{baseUrl}}/register
+Content-type: application/json
+
+{
+    "name": "Fran",
+    "email": "fran@mail.com",
+    "password": "CC1234562"
+}
+
+### FORGET
+POST {{baseUrl}}/forget
+Content-type: application/json
+
+{
+    "email": "fran@mail.com",
+
+}
+
+### RESET
+POST {{baseUrl}}/reset
+Content-type: application/json
+
+{
+    "password": "AA1234562",
+    "token": "a.a.a"
+
+}

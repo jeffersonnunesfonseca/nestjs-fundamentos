@@ -10,10 +10,10 @@ import { PrismaModule } from 'src/prisma/prisma.module';
 import { UserIdCheckMiddleware } from 'src/middlewares/user-id-check.middleware';
 
 @Module({
-  imports: [PrismaModule], // oque irei importar
-  controllers: [UserController], //meus controllers
-  providers: [UserService], // os serviços injectable
-  exports: [], //oque irei exportar do meu modulo
+  imports: [PrismaModule], // modulos externos para importar
+  controllers: [UserController], //meus controllers referente ao modulo
+  providers: [UserService], // os serviços injectable, referente ao modulo
+  exports: [UserService], //oque irei exportar do meu modulo, referente ao modulo
 })
 export class UserModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
