@@ -1,4 +1,5 @@
-@baseUrl = http://localhost:3000/login
+@baseUrl = http://localhost:3000/auth
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IkZyYW4iLCJlbWFpbCI6ImZyYW5AbWFpbC5jb20iLCJpYXQiOjE2ODY0NTA0NDIsImV4cCI6MTY4NzA1NTI0MiwiYXVkIjoidXNlcnMiLCJpc3MiOiJsb2dpbiIsInN1YiI6IjQifQ.ckeq1kuA8V5cUcpPGB9k4-ZU4Fs1Ru_qikQPrKvbt_0
 
 ### LOGIN
 POST {{baseUrl}}/login
@@ -38,3 +39,7 @@ Content-type: application/json
     "token": "a.a.a"
 
 }
+
+### CHECK TOKEN
+POST {{baseUrl}}/me
+Authorization: Bearer {{token}}

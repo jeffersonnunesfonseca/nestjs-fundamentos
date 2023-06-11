@@ -209,3 +209,7 @@ Chaves reservadas
 NEST JWT
 
 `yarn add @nestjs/jwt`
+
+IMPLEMENTANDO GUARD
+
+como dito anteriormente, sua função é dizer se um manipulador de rota pode prosseguir ou nao

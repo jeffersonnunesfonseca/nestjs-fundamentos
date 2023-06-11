@@ -16,9 +16,6 @@ export class UserService {
         password: data.password,
         birth_at: data.birth_at ? new Date(data.birth_at) : null,
       },
-      select: {
-        id: true,
-      },
     });
   }
 

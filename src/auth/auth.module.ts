@@ -4,17 +4,20 @@ import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { UserService } from 'src/user/user.service';
 import { PrismaService } from 'src/prisma/prisma.service';
+import { UserModule } from 'src/user/user.module';
+import { PrismaModule } from 'src/prisma/prisma.module';
 
 @Module({
   imports: [
     JwtModule.register({
-      secret: 'nz673vRQv6*G4nWJeW^atCkEhF*3bV!&',
+      secret: process.env.JWT_TOKEN,
+      // secret: 'nz673vRQv6*G4nWJeW^atCkEhF*3bV!&',
     }),
-    UserService,
-    PrismaService,
+    UserModule,
+    PrismaModule,
   ],
-  providers: [AuthService],
   controllers: [AuthController],
-  exports: [],
+  providers: [AuthService],
+  // exports: [AuthService],
 })
 export class AuthModule {}
