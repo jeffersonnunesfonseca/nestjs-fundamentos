@@ -16,6 +16,7 @@ import { AuthMeDTO } from './dto/auth-me.dto';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { User } from 'src/decorators/user.decorator';
 import { users } from '@prisma/client';
+import { Throttle, ThrottlerGuard } from '@nestjs/throttler';
 
 @Controller('auth')
 export class AuthController {
@@ -23,6 +24,9 @@ export class AuthController {
     private readonly userService: UserService,
     private readonly authService: AuthService,
   ) {}
+
+  // @UseGuards(ThrottlerGuard)
+  @Throttle(10) //sobreescreve o padrao
   @Post('/login')
   async login(@Body() { email, password }: AuthLoginDTO) {
     return await this.authService.login(email, password);
@@ -43,10 +47,6 @@ export class AuthController {
     return await this.authService.reset(password, token);
   }
 
-  // @Post('me')
-  // async me(@Headers('authorization') token: string) {
-  //   return await this.authService.checkToken((token ?? '').split(' ')[1]);
-  // }
   @UseGuards(AuthGuard)
   @Post('me')
   async me(@User('email') user: users) {

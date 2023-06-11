@@ -1,20 +1,24 @@
 @baseUrl = http://localhost:3000/users
-
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkplZmZlcnNvbiIsImVtYWlsIjoiamVmZkBtYWlsLmNvbSIsImlhdCI6MTY4NjQ4MDk2MiwiZXhwIjoxNjg3MDg1NzYyLCJhdWQiOiJ1c2VycyIsImlzcyI6ImxvZ2luIiwic3ViIjoiMiJ9.7p_O6eTjynmTvWIJ1BLUfGxY7wvey0DCnVxfrgmeFY4
 ### CREATE
 POST {{baseUrl}}
+Authorization: Bearer {{token}}
 Content-type: application/json
 
 {
-    "name": "Fran",
-    "email": "fran@mail.com",
+    "name": "Jose",
+    "email": "jose@mail.com",
     "password": "CC123456"
 }
 
 ### GET ALL
 GET {{baseUrl}}
+Authorization: Bearer {{token}}
+
 
 ### GET BY ID
-GET {{baseUrl}}/4
+GET {{baseUrl}}/2
+Authorization: Bearer {{token}}
 
 ### UPDATE ALL DATA
 PUT {{baseUrl}}/2
@@ -27,11 +31,12 @@ Content-type: application/json
 }
 
 ### UPDATE PARTIAL
-PATCH {{baseUrl}}/4
+PATCH {{baseUrl}}/2
+Authorization: Bearer {{token}}
 Content-type: application/json
 
 {
-    "birth_at": "1993-08-05"
+    "password": "A123456"
 }
 
 ### DELETE

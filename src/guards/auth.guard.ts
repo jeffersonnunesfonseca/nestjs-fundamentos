@@ -23,8 +23,10 @@ export class AuthGuard implements CanActivate {
 
       request.jwtPayload = data;
       request.user = await this.userService.findOne(data.id);
+
       return true;
     } catch (e) {
+      console.log('Verifique se esta sendo passo um token');
       return false;
     }
   }

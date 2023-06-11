@@ -213,3 +213,28 @@ NEST JWT
 IMPLEMENTANDO GUARD
 
 como dito anteriormente, sua função é dizer se um manipulador de rota pode prosseguir ou nao
+
+AUTORIZAÇÃO RBAC (ROLE BASED ACCESS CONTROL)
+controle de acesso por meio de roles, utilizando estrategia de decorators e guard
+
+CIRCULAR DEPENDECY
+import { forwardRef } from '@nestjs/common';
+forwardRef(() => AuthModule)
+basicamente isso acontece qunado temos Dois modulos se chamando fazendo com que entrem em loop, para resolver basta adicinalo dentro da função forwardRef()
+
+HASH PASSWORD com BCRYPT
+`yarn add bcrypt`
+`yarn add -D @types/bcrypt`
+
+CORS
+
+configuração fica no bootstrap do nest
+app.enableCors();
+
+posso passar configs por meio de oobjeto
+
+RATE LIMIT
+
+`yarn add @nestjs/throttler`
+
+podemos ter configuração padrao e ajustar para cada handler ou classe

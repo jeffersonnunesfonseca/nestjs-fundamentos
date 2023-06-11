@@ -1,15 +1,14 @@
 @baseUrl = http://localhost:3000/auth
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IkZyYW4iLCJlbWFpbCI6ImZyYW5AbWFpbC5jb20iLCJpYXQiOjE2ODY0NTA0NDIsImV4cCI6MTY4NzA1NTI0MiwiYXVkIjoidXNlcnMiLCJpc3MiOiJsb2dpbiIsInN1YiI6IjQifQ.ckeq1kuA8V5cUcpPGB9k4-ZU4Fs1Ru_qikQPrKvbt_0
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkplZmZlcnNvbiIsImVtYWlsIjoiamVmZkBtYWlsLmNvbSIsImlhdCI6MTY4NjQ4MDk2MiwiZXhwIjoxNjg3MDg1NzYyLCJhdWQiOiJ1c2VycyIsImlzcyI6ImxvZ2luIiwic3ViIjoiMiJ9.7p_O6eTjynmTvWIJ1BLUfGxY7wvey0DCnVxfrgmeFY4
 
 ### LOGIN
 POST {{baseUrl}}/login
 Content-type: application/json
 
 {
-    "email": "fran@mail.com",
-    "password": "CC123456"
+    "email": "jeff@mail.com",
+    "password": "A123456"
 }
-
 
 ### REGISTER
 POST {{baseUrl}}/register
